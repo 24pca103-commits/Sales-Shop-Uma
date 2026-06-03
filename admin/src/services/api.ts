@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8000/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -91,12 +91,12 @@ export interface Product {
   category: number;
   category_name: string;
   image_url: string;
-  image_url_2?: string;
-  image_url_3?: string;
-  image_url_4?: string;
+  image_url_2?: string | null;
+  image_url_3?: string | null;
+  image_url_4?: string | null;
   unit: string;
   description?: string;
-  sub_category?: string;
+  sub_category?: string | null;
   in_stock: boolean;
 }
 
