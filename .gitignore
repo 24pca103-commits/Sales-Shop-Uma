@@ -1,6 +1,6 @@
 node_modules/
 dist/
-admin/dist/
+uma-admin/dist/
 backend/venv/
 **/__pycache__/
 *.pyc
